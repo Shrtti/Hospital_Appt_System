@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Appointment Database</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  
+  <link href="{% static 'images/favicon.png' %}" rel="icon">
+  <link href="{% static 'images/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: #37517e;">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="{% url 'home_page' %}" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">Appointment Database</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'home_page' %}">Home</a></li>
+          <li><a href="{% url 'add_department' %}" class="active">Add Department</a> </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <section class="frm">
+  <div class="signup-container">
+    <div class="left-container">
+      
+      <div class="ven">
+        EXPAND <br> YOUR <br> MEDICAL <br> TEAM
+      </div>
+    </div>
+    <div class="right-container">
+      <header>
+        <h1>Enter your details</h1>
+        <div class="set">
+          <div class="patient-name">
+            <label for="patient-name">Name</label>
+            <input id="patient-name" type="text" placeholder="Department's name" />
+          </div>
+
+          <div class="dr-id">
+            <label for="dr-id">Department's ID: </label>
+            <input id="dr-id" type="text" placeholder="Department's ID" />
+          </div>
+        </div>
+    
+      </header>
+      <footer>
+        <div class="set">
+          <a href="{% url 'hospital_edit' %}"><button id="back">Back</button></a>
+          <a href="{% url 'hospital_edit' %}"><button id="next">Next</button></a>
+        </div>
+      </footer>
+    </div>
+  </div>
+    </section>
+</body>
+  
